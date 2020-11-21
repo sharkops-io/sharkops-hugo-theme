@@ -1,0 +1,13 @@
+<header class="header header-7">
+    <div class="branding">
+        <a href="/" class="nav-link">
+            <span class="title">SharkOps</span>
+        </a>
+    </div>
+    <div class="header-nav">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <a class="nav-link nav-item-{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ end }}
+    </div>
+</header>

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{ .Title | title }}</h1>
+
+{{ range (.Paginator).Pages }}
+{{ partial "article-list-single.html" . }}
+{{ end }}
+{{ partial "pagination.html" . }}
+
+{{ end }}

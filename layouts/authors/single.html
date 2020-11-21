@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<h2>Recent Content</h2>
+
+{{ range first 10 (where .Site.Pages "Params.author.key" .Params.me) }}
+{{ partial "article-list-single.html" . }}
+{{ end }}
+
+{{ end }}

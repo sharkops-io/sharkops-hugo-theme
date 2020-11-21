@@ -1,0 +1,20 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav aria-label="Page navigation" style="margin-top: 1rem;">
+    <div class="btn-group">
+        {{ if $pag.HasPrev }}
+        <a class="btn btn-outline" href="{{ $pag.Prev.URL }}" rel="prev">&laquo; Prev</a>
+        {{ end }}
+        {{ range $pag.Pagers }}
+        {{ if eq . $pag }}
+        <a class="btn btn-solid btn-primary" href="{{ .URL }}" disabled>{{ .PageNumber }}</a>
+        {{ else }}
+        <a class="btn btn-outline" href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ end }}
+        {{ end }}
+        {{ if $pag.HasNext }}
+        <a class="btn btn-outline" href="{{ $pag.Next.URL }}" rel="next">Next &raquo;</a>
+        {{ end }}
+    </div>
+</nav>
+{{ end }}

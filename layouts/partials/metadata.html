@@ -1,0 +1,13 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+&nbsp;|&nbsp;
+{{ $authorHref := print (absURL "authors/") (.Params.author.key) }}
+<a href="{{ $authorHref }}">{{ .Params.author.name }}</a>
+&nbsp;|&nbsp;
+{{ with .Params.categories }}
+{{ range . }}
+{{ $href := print (absURL "categories/") (urlize .) }}
+<a href="{{ $href }}">{{ . }}</a>&nbsp;|
+{{ end }}
+{{ end }}
