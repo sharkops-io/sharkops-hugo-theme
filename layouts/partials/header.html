@@ -4,10 +4,12 @@
             <span class="title">SharkOps</span>
         </a>
     </div>
-    <div class="header-nav">
+</header>
+<nav class="subnav">
+    <ul class="nav">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <a class="nav-link nav-item-{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        <li class="nav-item"><a class="nav-link nav-item-{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
         {{ end }}
-    </div>
-</header>
+    </ul>
+</nav>
