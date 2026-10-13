@@ -1,0 +1,6 @@
+# Secret scanning only. Gives merge requests a pipeline, which "Pipelines must
+# succeed" (on across sharkops) requires before anything can merge, and scans
+# this public repo, which nothing did before.
+include:
+  - project: 'sharkops/gitlab-ci-common-config'
+    file: 'security/secret-scan.yml'
