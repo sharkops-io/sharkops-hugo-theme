@@ -1,3 +1,3 @@
-module gitlab.com/sharkops/sharkops-hugo-theme
+module github.com/sharkops-io/sharkops-hugo-theme
 
 go 1.15

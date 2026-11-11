@@ -2,10 +2,10 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "SharkOps Theme"
-license = "MIT"
-licenselink = "https://gitlab.com/sharkops/sharkops-hugo-theme/blob/master/LICENSE"
+license = "Apache-2.0"
+licenselink = "https://github.com/sharkops-io/sharkops-hugo-theme/blob/master/LICENSE"
 description = "A minimal theme based on the VMware Clarity design system"
-homepage = "https://gitlab.com/sharkops/sharkops-hugo-theme"
+homepage = "https://github.com/sharkops-io/sharkops-hugo-theme"
 tags = ["website", "blog"]
 features = ["posts", "articles"]
 min_version = "0.63.0"
